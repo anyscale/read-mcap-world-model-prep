@@ -13,9 +13,9 @@ One pipeline turns a fleet's MCAP episodes into labeled training clips:
       -> WebDataset shards, one sample per clip
 
 Usage:
-    python prepare_samples.py make-demo demo/             # synthetic episodes
-    python prepare_samples.py run demo/manifest.jsonl out/ --checkpoint ckpt/
-    python prepare_samples.py run ... --captioner vlm --model Qwen/Qwen2.5-VL-7B-Instruct
+    python e2e_vlm.py make-demo demo/             # synthetic episodes
+    python e2e_vlm.py run demo/manifest.jsonl out/ --checkpoint ckpt/
+    python e2e_vlm.py run ... --captioner vlm --model Qwen/Qwen2.5-VL-7B-Instruct
 
 Needs Ray with the read_mcap stack (ray-project/ray#66654, #66655, #66670),
 plus: mcap, mcap-ros2-support, av, pillow, aiohttp. The VLM captioner also

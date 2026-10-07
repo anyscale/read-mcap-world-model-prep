@@ -34,7 +34,7 @@ training samples, the kind that robot world models and policies learn from.
 
 | File | What it is |
 |---|---|
-| [`prepare_samples.py`](prepare_samples.py) | A complete pipeline. MCAP episodes become 3.2 s clips of two cameras plus joint state and commands, on one 100 ms clock. Then quality checks, VLM captions, and WebDataset shards. It also writes synthetic episodes, so it runs on a laptop in seconds. |
+| [`e2e_vlm.py`](e2e_vlm.py) | A complete pipeline. MCAP episodes become 3.2 s clips of two cameras plus joint state and commands, on one 100 ms clock. Then quality checks, VLM captions, and WebDataset shards. It also writes synthetic episodes, so it runs on a laptop in seconds. |
 | `README.md` | This page: how the reader works, and why each part is there. |
 
 ## The idea in 30 seconds
@@ -214,7 +214,7 @@ hides new work.
 
 ## The sample-prep pipeline
 
-`prepare_samples.py` turns episodes into training samples:
+`e2e_vlm.py` turns episodes into training samples:
 
 ```mermaid
 flowchart LR
